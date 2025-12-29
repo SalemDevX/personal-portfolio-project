@@ -54,19 +54,19 @@ const Hero = () => {
           className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
         ></a>
         <a
-          href=""
+          href="https://www.linkedin.com/in/salem-ogheneochuko-38a41b326/"
           target="_blank"
           rel="noreferrer"
           className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
         ></a>
-        <a
-          href=""
+        {/* <a
+          href="https://x.com/Salemoghen44304"
           target="_blank"
           rel="noreferrer"
           className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
-        ></a>
+        ></a> */}
         <a
-          href=""
+          href="mailto:ogheneochukosalem@gmail.com"
           target="_blank"
           rel="noreferrer"
           className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
