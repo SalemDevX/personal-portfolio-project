@@ -42,35 +42,42 @@ const Hero = () => {
               Contact Me
             </a>
           </div>
-        </div>
-      </div>
 
-      {/* Social Links */}
-      <div className="mt-8 flex gap animate-fade-up [animation-delay:500ms]">
-        <a
-          href="https://github.com/SalemDevX"
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/salem-ogheneochuko-38a41b326/"
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
-        ></a>
-        {/* <a
+          {/* Social Links */}
+          <div className="mt-8 flex gap animate-fade-up [animation-delay:500ms] gap-6 border-t border-white/10 pt-6">
+            <a
+              href="https://github.com/SalemDevX"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
+            >
+              github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/salem-ogheneochuko-38a41b326/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
+            >
+              {" "}
+              linkedin
+            </a>
+            {/* <a
           href="https://x.com/Salemoghen44304"
           target="_blank"
           rel="noreferrer"
           className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
         ></a> */}
-        <a
-          href="mailto:ogheneochukosalem@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
-        ></a>
+            <a
+              href="mailto:ogheneochukosalem@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-gray-400 transition hover:text-sky-400"
+            >
+             Email
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
