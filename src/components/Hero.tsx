@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
 
         {/* Social links */}
-        <div className="mt-8 flex justify-center gap-6 animate-fade-up [animation-delay:500ms]">
+        {/* <div className="mt-8 flex justify-center gap-6 animate-fade-up [animation-delay:500ms]">
           <a
             href="https://github.com/SalemDevX"
             target="_blank"
@@ -67,7 +67,7 @@ const Hero = () => {
           >
             Email
           </a>
-        </div>
+        </div> */}
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-up [animation-delay:600ms]">
