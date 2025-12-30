@@ -70,7 +70,7 @@ const ProjectCard = ({
           rel="noopener noreferrer"
           className="inline-flex w-full items-center justify-center rounded-md bg-sky-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-sky-400"
         >
-          Preview Project{" "}
+          Preview Project →
         </a>
       </div>
     </motion.article>
