@@ -48,8 +48,30 @@ const ProjectCard = ({
         <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
 
         <p className="mb-4 text-sm leading-relaxed text-gray-400">
-            {description}
+          {description}
         </p>
+
+        {/* Tags */}
+        <div className="mb-6 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-white/5 px-3 py-1 text-xs text-gray-300"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Single CTA */}
+        <a
+          href={previewUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-md bg-sky-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-sky-400"
+        >
+          Preview Project{" "}
+        </a>
       </div>
     </motion.article>
   );
