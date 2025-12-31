@@ -4,10 +4,11 @@ const PROJECTS = [
   {
     title: "Personal Portfolio",
     description:
-      "A modern, responsive portfolio built with React, TypeScript, and Tailwind CSS.",
+      "A sleek personal portfolio showcasing selected projects, built with React and TypeScript, featuring a responsive layout, clean UI, and modern design patterns for maintainability and performance.",
     image: "/public/projects/reactproject.png",
-    tags: ["React", "TypeScript", "Tailwind"],
-    previewUrl: "https://react-website-552gfenbe-salem4techs-projects.vercel.app/",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Responsive"],
+    previewUrl:
+      "https://react-website-552gfenbe-salem4techs-projects.vercel.app/",
     featured: true,
   },
   {
@@ -15,15 +16,15 @@ const PROJECTS = [
     description:
       "Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles with its clean design and responsive layout.",
     image: "/public/projects/brainwave.png",
-    tags: ["React", "Tailwind", "UI"],
+    tags: ["React", "Tailwind", "UI", "Animation"],
     previewUrl: "https://brain-wave-website-three.vercel.app/",
   },
   {
     title: "Landing Page",
     description:
-      "High-conversion landing page with smooth animations and responsive layout.",
+      "A modern e-commerce frontend built with React and Tailwind CSS, featuring a clean product layout, responsive design, and smooth user interactions optimized for performance and usability.",
     image: "/public/projects/e-commerce .png",
-    tags: ["Frontend", "Animation"],
+    tags: ["React", "Tailwind", "E-commerce", "Responsive UI"],
     previewUrl: "https://e-commerce-react-swart.vercel.app/",
   },
 ];
