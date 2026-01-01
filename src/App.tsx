@@ -1,6 +1,8 @@
 import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
 import Projects from "./components/sections/Projects";
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
 
       <main className="pt-16">
         <Hero />
+        <About />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
