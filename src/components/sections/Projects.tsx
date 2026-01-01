@@ -14,7 +14,7 @@ const PROJECTS = [
   {
     title: "Dashboard UI",
     description:
-      "Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles with its clean design and responsive layout.",
+      "Brainwave - Modern UI/UX website, developed using React.js, Tailwind CSS, TypeScript exemplifies modern UI/UX principles with its clean design and responsive layout.",
     image: "/public/projects/brainwave.png",
     tags: ["React", "Tailwind", "UI", "Animation"],
     previewUrl: "https://brain-wave-website-three.vercel.app/",
