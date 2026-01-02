@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { NAV_LINKS } from "../config/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,13 +31,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur">
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur"
+    >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Brand */}
-        <a
-          href="#"
-          className="text-lg font-semibold tracking-tight text-white"
-        >
+        <a href="#" className="text-lg font-semibold tracking-tight text-white">
           Salem<span className="text-sky-400">.dev</span>
         </a>
 
@@ -48,17 +49,25 @@ const Navbar = () => {
             const isActive = activeSection === href;
 
             return (
-              <li key={label}>
+              <li key={label} className="relative">
                 <a
                   href={href}
                   className={`text-sm font-medium transition-colors ${
                     isActive
                       ? "text-sky-400"
                       : "text-gray-300 hover:text-sky-400"
-                  } focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400`}
+                  }`}
                 >
                   {label}
                 </a>
+
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-indicator"
+                    className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-sky-400"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </li>
             );
           })}
@@ -75,32 +84,45 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur">
-          <ul className="flex flex-col gap-2 px-6 py-4">
-            {NAV_LINKS.map(({ label, href }) => {
-              const isActive = activeSection === href;
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="md:hidden overflow-hidden border-t border-white/10 bg-slate-950/95 backdrop-blur"
+          >
+            <ul className="flex flex-col gap-2 px-6 py-4">
+              {NAV_LINKS.map(({ label, href }) => {
+                const isActive = activeSection === href;
 
-              return (
-                <li key={label}>
-                  <a
-                    href={href}
-                    onClick={() => setMenuOpen(false)}
-                    className={`block rounded-md px-4 py-2 text-sm font-medium transition ${
-                      isActive
-                        ? "bg-white/5 text-sky-400"
-                        : "text-gray-300 hover:bg-white/5 hover:text-sky-400"
-                    }`}
+                return (
+                  <motion.li
+                    key={label}
+                    initial={{ x: -10, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.25 }}
                   >
-                    {label}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
-    </header>
+                    <a
+                      href={href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`block rounded-md px-4 py-2 text-sm font-medium transition ${
+                        isActive
+                          ? "bg-white/5 text-sky-400"
+                          : "text-gray-300 hover:bg-white/5 hover:text-sky-400"
+                      }`}
+                    >
+                      {label}
+                    </a>
+                  </motion.li>
+                );
+              })}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 };
 
