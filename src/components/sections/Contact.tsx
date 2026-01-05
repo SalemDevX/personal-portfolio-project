@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion"; // ✅ import easeOut
 
 const container = {
   hidden: {},
@@ -20,7 +20,7 @@ const item = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: easeOut, // ✅ use the imported function
     },
   },
 };
